@@ -28,21 +28,35 @@ const TodoDetail = () => {
     }
 
     const handleFinishClick = () => {
-        setisChecked(!isChecked)
-        let count = 0
-        isChecked === true ? count ++ : count --
+
+        const updateRequest = {
+            method : "PUT",
+            body : JSON.stringify({...todo, finished : !isChecked}),
+            headers : {'Content-Type': 'application/json'}
+        }
+
+        fetch(`http://localhost:3000/lists/${id}`,updateRequest)
+        .then (() => {
+            setisChecked(!isChecked)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+        // 
+        // let count = 0
+        // isChecked === true ? count ++ : count --
     }
     return (
         <div className="todoDetail">
             {todo && (
-                <article>
+                <article className="detailTodo">
                     <h2> {todo.title} </h2>
-                    <p>date is {todo.date}</p>
+                    <p>deadline is {todo.date}</p>
                     <div>{todo.detail}</div>
-                    <button onClick={handleFinishClick}>
-                        {isChecked ? "☐" :"☑"}
+                    <button className="checkbox" onClick={handleFinishClick}>
+                    완료했나요?  {isChecked ? "☐" :"☑"}
                     </button>
-                    <button onClick={handleDeleteClick}>삭제하기</button>
+                    <button className="deleteButten" onClick={handleDeleteClick}>삭제하기</button>
                 </article>
             )}
         </div>

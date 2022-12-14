@@ -7,10 +7,12 @@ import TodoList from './components/TodoList';
 import Footer from './components/Footer';
 import TodoDetail from './components/TodoDetali';
 import CreateTodo from './components/createTodo';
+import CheckCalendar from './components/Calendar';
+import NowDate from './components/NowDate';
 
 function App() {
-  const [todos, settTodos] = useFetch('http://localhost:3000/lists/')
-  console.log(todos)
+  const [todos, setTodos] = useFetch('http://localhost:3000/lists/')
+  // console.log(todos)
   return (
     <BrowserRouter>
       <Nev />
@@ -19,14 +21,14 @@ function App() {
           <div className='content'>
             오늘의 할 일
             {<TodoList todos={todos}/>}
-            <button className='addtodo'>할 일 추가하기</button>
           </div>
           <div className='tododetail'>
-            <div className='todayDate'>2022.12.14 (수)</div>   
+            <div className='todayDate'>{<NowDate/>}</div>   
             <Routes>
               {/* <Route path='/list' element={<TodoList todos={todos}/>} /> */}
               <Route path='/lists/:id' element={<TodoDetail />}/>
               <Route path='/create' element={<CreateTodo />}/>
+              <Route path='/calender' element={<CheckCalendar />}/>
             </Routes>
           </div>
         </header>

@@ -60,7 +60,7 @@
 }
 
 .menu {
-  margin-right: 60px;
+  margin: 60px;
   font-size: 17px;
 }
 
@@ -76,29 +76,51 @@ footer {
   padding: 20px;
 }
 .content {
-
-  width: 50vh;
-  height: 60vh;
+  width: 40%;
   margin: 10px;
-  font-size: 20px;
+  font-size: 30px;
 }
 .list{
   display: flex;
   flex-direction: row;
   align-items:center;
   justify-content: space-between;
-  margin-right: 30px;
+  margin: 20px;
+  font-size: 15px;
+}
+.todo-list {
+  margin-top: 50px;
+  border-radius: 1px solid black;
 }
 .addtodo {
   margin-top: 40px;
 }
 .todayDate{
-  font-size: 20px;
+  font-size: 40px;
   width: 40vh;
-
+  margin: 30px;
 }
 .tododetail{
-  flex-direction: flex;
+  width: 60%;
+  display: flex;
+  flex-direction:column;
   align-items:center;
-  justify-content: space-between;
+  justify-content: center;
+}
+.detailTodo{
+  margin: 40px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  font-size: 23px;
+}
+.home {
+  margin-right: 20px;
+}
+.deleteButten {
+  font-size: 15px;
+}
+.checkbox {
+  margin: 50px;
+  font-size: 15px;
 }

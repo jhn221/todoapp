@@ -1,25 +1,23 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const CreateTodo = () => {
     const [title, setTitle] = useState('')
     const [date, setDate] = useState('')
     const [detail, setDetail] = useState('')
-    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
-        e.proventDefault();
-
+    
         const newTodo = {
             title,
             date,
             detail,
             finished : false
         }
+        console.log(newTodo)
 
         const request = {
             method : "POST",
-            detail : JSON.stringify(newTodo),
+            body : JSON.stringify(newTodo),
             headers : {'Content-Type': 'application/json'}
         }
         fetch('http://localhost:3000/lists/',request)
@@ -29,14 +27,14 @@ const CreateTodo = () => {
         .catch(err => {
             console.log(err)
         })
-        console.log(e.type)
+        console.log(e.target.value)
     }
 
     return (
         <div className="creatList">
             <h2>할 일 추가하기</h2>
-            <form onSubmit={handleSubmit}>
-            <label>제목</label>
+            <form className="form" onSubmit={handleSubmit}>
+            <label>TODO : </label>
             <input 
             type="text"
             required
@@ -44,22 +42,27 @@ const CreateTodo = () => {
             onChange={(e) => setTitle(e.target.value)}
             placeholder="제목을 입력해주세요"
             />
-            <label>날짜</label>
+            <br/><br/>
+            <label>DATE : </label>
             <input 
-            type="text"
+            type="date"
             required
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            placeholder="제목을 입력해주세요"
+            placeholder="날짜를 입력해주세요"
             />
-            <label>내용</label>
-            <select
+            <br/><br/>
+            <label>자세한 내용을 적어주세요! </label>
+            <br/>
+            <textarea
             value={detail}
             onChange={(e) => setDetail(e.target.value)}
-            ></select>
+            placeholder="내용을 입력해주세요"
+            ></textarea>
+            <br/><br/>
             <button>등록</button>
             </form>
         </div>
     )
 }
-export default CreateTodo
+export default CreateTodo;

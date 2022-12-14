@@ -1,11 +1,46 @@
 {
   "lists": [
     {
-      "id": 1,
-      "title": "블로그 올리기",
-      "date": "12월 12일",
-      "detail": "오늘의 TIL tstory에 올리기",
-      "finished": true
+      "title": "할일 추가 구현하기",
+      "date": "2022-12-14",
+      "detail": "creatTodo.js 파일 수정해서 추가 기능 구현하기",
+      "finished": true,
+      "id": 9
+    },
+    {
+      "title": "할일 수정 구현하기",
+      "date": "2022-12-14",
+      "detail": "체크박스 선택하면 false값이 true값으로 수정되게 구현하기",
+      "finished": false,
+      "id": 10
+    },
+    {
+      "title": "할일 삭제 구현하기",
+      "date": "2022-12-14",
+      "detail": "detail 안으로 들어가서 삭제 버튼 누르면 할일 삭제 되도록 구현하기",
+      "finished": false,
+      "id": 11
+    },
+    {
+      "title": "css 수정",
+      "date": "2022-12-14",
+      "detail": "허접한...css 파일 좀더 보기 좋기 수정하기",
+      "finished": false,
+      "id": 12
+    },
+    {
+      "title": "오늘의 날짜 뜨게 구현하기",
+      "date": "2022-12-14",
+      "detail": "날짜가 매일 업데이트 되도록 구현하기",
+      "finished": false,
+      "id": 13
+    },
+    {
+      "title": "렌덤 문구 지정하기",
+      "date": "언젠간....",
+      "detail": "하단에 뜨는 명언을 랜덤으로 뜨게 하기!",
+      "finished": false,
+      "id": 15
     }
   ]
 }

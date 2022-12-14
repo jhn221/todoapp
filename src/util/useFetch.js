@@ -14,7 +14,7 @@ const useFetch = (url) => {
             })
             .then(data => {
                 setTodo(data)
-                console.log(data)
+                // console.log(data)
             })
             .catch(err => {
                 console.log("err")

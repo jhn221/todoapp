@@ -13,7 +13,7 @@ const TodoList = ({ todos }) => {
       <div className="todo-list">
         {todos.map(todo => (
           <div className="list" key={todo.id}>
-            ☐{todo.finished}
+            * {todo.finished}
             <Link to={`/lists/${todo.id}`} >
               <h2>{todo.title}</h2>
             </Link>
