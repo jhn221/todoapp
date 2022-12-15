@@ -1,13 +1,6 @@
 {
   "lists": [
     {
-      "title": "할일 추가 구현하기",
-      "date": "2022-12-14",
-      "detail": "creatTodo.js 파일 수정해서 추가 기능 구현하기",
-      "finished": true,
-      "id": 9
-    },
-    {
       "title": "할일 수정 구현하기",
       "date": "2022-12-14",
       "detail": "체크박스 선택하면 false값이 true값으로 수정되게 구현하기",
@@ -41,6 +34,20 @@
       "detail": "하단에 뜨는 명언을 랜덤으로 뜨게 하기!",
       "finished": false,
       "id": 15
+    },
+    {
+      "title": "반응형 웹",
+      "date": "2022-12-21",
+      "detail": "반응형 웹 적용해보기",
+      "finished": false,
+      "id": 16
+    },
+    {
+      "title": "과제 제출",
+      "date": "2022-12-14",
+      "detail": "오늘 구현한것 까지 과제 제출하기",
+      "finished": false,
+      "id": 17
     }
   ]
 }
