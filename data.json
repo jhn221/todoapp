@@ -11,7 +11,7 @@
       "title": "할일 삭제 구현하기",
       "date": "2022-12-14",
       "detail": "detail 안으로 들어가서 삭제 버튼 누르면 할일 삭제 되도록 구현하기",
-      "finished": false,
+      "finished": true,
       "id": 11
     },
     {
